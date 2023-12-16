@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  align-self: center;
+  margin-top: 30px;
+}

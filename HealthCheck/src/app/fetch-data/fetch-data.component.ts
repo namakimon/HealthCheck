@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment'
 @Component({
   selector: 'app-fetch-data',
   templateUrl: './fetch-data.component.html',
-  styleUrl: './fetch-data.component.css'
+  styleUrl: './fetch-data.component.scss'
 })
 export class FetchDataComponent implements OnInit {
   public forecasts?: WeatherForecast[];
@@ -18,7 +18,6 @@ export class FetchDataComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 }
 

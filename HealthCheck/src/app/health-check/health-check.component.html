@@ -1,0 +1,44 @@
+<h1>Health Check</h1>
+<hr />
+<div *ngIf="!result">
+  <p><em>Loading...</em></p>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+
+<div *ngIf="result">
+  <table class="table table-striped" aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Response Time</th>
+        <th>Status</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let check of result.checks">
+        <td>{{ check.name }}</td>
+        <td>{{ check.responseTime }}</td>
+        <td class="status {{ check.status }}">{{ check.status }}</td>
+        <td>{{ check.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+  <table>
+    <thead>
+      <tr>
+        <th>Total Status</th>
+        <th>Total Response Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ result.totalStatus }}</td>
+        <td>{{ result.totalResponseTime }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
